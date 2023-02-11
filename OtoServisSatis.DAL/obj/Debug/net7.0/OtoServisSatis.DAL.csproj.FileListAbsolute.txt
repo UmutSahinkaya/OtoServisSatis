@@ -1,0 +1,17 @@
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\obj\Debug\net7.0\OtoServisSatis.DAL.csproj.AssemblyReference.cache
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\obj\Debug\net7.0\OtoServisSatis.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\obj\Debug\net7.0\OtoServisSatis.DAL.AssemblyInfoInputs.cache
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\obj\Debug\net7.0\OtoServisSatis.DAL.AssemblyInfo.cs
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\obj\Debug\net7.0\OtoServisSatis.DAL.csproj.CoreCompileInputs.cache
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\bin\Debug\net7.0\OtoServisSatis.DAL.deps.json
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\bin\Debug\net7.0\OtoServisSatis.DAL.runtimeconfig.json
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\bin\Debug\net7.0\OtoServisSatis.DAL.dll
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\bin\Debug\net7.0\OtoServisSatis.DAL.pdb
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\bin\Debug\net7.0\OtoServisSatis.Entities.dll
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\bin\Debug\net7.0\OtoServisSatis.Entities.pdb
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\obj\Debug\net7.0\OtoServisSatis.DAL.csproj.CopyComplete
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\obj\Debug\net7.0\OtoServisSatis.DAL.dll
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\obj\Debug\net7.0\refint\OtoServisSatis.DAL.dll
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\obj\Debug\net7.0\OtoServisSatis.DAL.pdb
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\obj\Debug\net7.0\OtoServisSatis.DAL.genruntimeconfig.cache
+C:\Users\umut\source\repos\OtoServisSatis\OtoServisSatis.DAL\obj\Debug\net7.0\ref\OtoServisSatis.DAL.dll
