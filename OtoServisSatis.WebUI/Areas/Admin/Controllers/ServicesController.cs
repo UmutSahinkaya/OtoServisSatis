@@ -1,53 +1,50 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using OtoServisSatis.Entities;
 using OtoServisSatis.Service.Abstract;
+using OtoServisSatis.Service.Concrete;
 
 namespace OtoServisSatis.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class UsersController : Controller
+    public class ServicesController : Controller
     {
-        private readonly IService<Kullanici> _service;
-        private readonly IService<Rol> _Roleservice;
-        public UsersController(IService<Kullanici> service, IService<Rol> roleservice)
+        private readonly IService<Servis> _service;
+
+        public ServicesController(IService<Servis> service)
         {
             _service = service;
-            _Roleservice = roleservice;
         }
 
-        // GET: UsersController
+        // GET: ServicesController
         public async Task<ActionResult> Index()
         {
-            ViewBag.RolId = new SelectList(await _Roleservice.GetAllAsync(), "Id", "Adi");
             var model = await _service.GetAllAsync();
             return View(model);
         }
 
-        // GET: UsersController/Details/5
+        // GET: ServicesController/Details/5
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        // GET: UsersController/Create
-        public async Task<ActionResult> Create()
+        // GET: ServicesController/Create
+        public ActionResult Create()
         {
-            ViewBag.RolId = new SelectList(await _Roleservice.GetAllAsync(), "Id", "Adi");
             return View();
         }
 
-        // POST: UsersController/Create
+        // POST: ServicesController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(Kullanici kullanici)
+        public async Task<ActionResult> Create(Servis servis)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    await _service.AddAsync(kullanici);
+                    await _service.AddAsync(servis);
                     await _service.SaveAsync();
                     return RedirectToAction(nameof(Index));
                 }
@@ -56,28 +53,26 @@ namespace OtoServisSatis.WebUI.Areas.Admin.Controllers
                     ModelState.AddModelError("", "Hata Oluştu!");
                 }
             }
-            ViewBag.RolId = new SelectList(await _Roleservice.GetAllAsync(), "Id", "Adi");
-            return View(kullanici);
+            return View(servis);
         }
 
-        // GET: UsersController/Edit/5
+        // GET: ServicesController/Edit/5
         public async Task<ActionResult> Edit(int id)
         {
             var model = await _service.FindAsync(id);
-            ViewBag.RolId = new SelectList(await _Roleservice.GetAllAsync(), "Id", "Adi");
             return View(model);
         }
 
-        // POST: UsersController/Edit/5
+        // POST: ServicesController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Edit(int id,Kullanici kullanici)
+        public async Task<ActionResult> Edit(int id,Servis servis)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _service.Update(kullanici);
+                    _service.Update(servis);
                     await _service.SaveAsync();
                     return RedirectToAction(nameof(Index));
                 }
@@ -86,32 +81,32 @@ namespace OtoServisSatis.WebUI.Areas.Admin.Controllers
                     ModelState.AddModelError("", "Hata Oluştu!");
                 }
             }
-            ViewBag.RolId = new SelectList(await _Roleservice.GetAllAsync(), "Id", "Adi");
-            return View(kullanici);
+            return View(servis);
         }
 
-        // GET: UsersController/Delete/5
+        // GET: ServicesController/Delete/5
         public async Task<ActionResult> Delete(int id)
         {
             var model = await _service.FindAsync(id);
             return View(model);
         }
 
-        // POST: UsersController/Delete/5
+        // POST: ServicesController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id,Kullanici kullanici)
+        public ActionResult Delete(int id, Servis servis)
         {
             try
             {
-                _service.Delete(kullanici);
+                _service.Delete(servis);
                 _service.Save();
                 return RedirectToAction(nameof(Index));
             }
             catch
             {
-                return View();
+                ModelState.AddModelError("", "Hata Oluştu!");
             }
+            return View();
         }
     }
 }

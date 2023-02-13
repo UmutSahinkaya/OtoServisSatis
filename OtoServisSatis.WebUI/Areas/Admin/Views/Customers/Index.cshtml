@@ -65,12 +65,12 @@
                 @Html.DisplayFor(modelItem => item.Notlar)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Arac.KasaTipi)
+                @Html.DisplayFor(modelItem => item.Arac.Modeli)
             </td>
             <td>
-                    <a class="btn btn-primary" asp-action="Düzenle" asp-route-id="@item.Id">Edit</a> |
+                    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
 
-                        <a class="btn btn-danger" asp-action="Sil" asp-route-id="@item.Id">Delete</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Sil</a>
             </td>
         </tr>
 }

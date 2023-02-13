@@ -26,9 +26,9 @@
                 @Html.DisplayFor(modelItem => item.Adi)
             </td>
             <td>
-                <a class="btn btn-primary" asp-action="Düzenle" asp-route-id="@item.Id">Edit</a> |
+                    <a class="btn btn-primary ml-4" asp-action="Edit" asp-route-id="@item.Id">Düzenle</a> |
                 
-                    <a class="btn btn-danger" asp-action="Sil" asp-route-id="@item.Id">Delete</a>
+                    <a class="btn btn-danger mr-4" asp-action="Delete" asp-route-id="@item.Id">Sil</a>
             </td>
         </tr>
 }
